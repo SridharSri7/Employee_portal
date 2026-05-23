@@ -133,3 +133,21 @@
        
     }
 }
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:0 20px;
+  }
+
+  .logo{
+    width:130px;
+  }
+
+  .login-btn{
+    width:auto;
+    padding:10px 18px;
+    font-size:15px;
+  }
+
+}
