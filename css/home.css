@@ -1791,9 +1791,9 @@ body{
 }
 
 /* FEATURES */
-.features{
+/* .features{
   cursor:progress;
-}
+} */
 
 .feature-box{
   cursor:pointer;
@@ -1820,6 +1820,15 @@ body{
 /* SERVICES */
 .services{
   cursor:copy;
+}
+
+/* why us */
+.choose-card{
+  cursor:pointer;
+}
+
+.team-image{
+  cursor:pointer;
 }
 
 /* TESTIMONIALS */
