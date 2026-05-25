@@ -13,28 +13,23 @@
 <nav class="navbar">
 
   <div class="logo">
-    <img src="./assets/logo-stackly (1).png" alt="">
+    <img src="./assets/logo-stackly (1).png" alt="Logo">
   </div>
 
-  <button class="menu-toggle" id="menuToggle">
-    ☰
-  </button>
+  <button class="menu-toggle" id="menuToggle">☰</button>
 
   <ul class="nav-links" id="navLinks">
 
-    <li><a href="home.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="employees.html">Employees</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="profile.html">Profile</a></li>
+    <li><a href="#" class="nav-item">Home</a></li>
+    <li><a href="#" class="nav-item">About</a></li>
+    <li><a href="#" class="nav-item">Services</a></li>
+    <li><a href="#" class="nav-item">Employees</a></li>
+    <li><a href="#" class="nav-item">Dashboard</a></li>
+    <li><a href="#" class="nav-item">Contact</a></li>
 
   </ul>
 
-  <button class="login-btn">
-    Login
-  </button>
+  <button class="login-btn">Login</button>
 
 </nav>
     
@@ -113,23 +108,71 @@
 </section>
 
 <!-- Section 4 : Employee Statistics -->
-<section class="stats">
-  <h2>Company Statistics</h2>
+<section class="company-stats">
 
-  <div class="stat-card">
-    <h3>500+</h3>
-    <p>Employees</p>
+  <div class="stats-header">
+
+    <h2>Company Impact in Numbers</h2>
+
+    <p>
+      Real-time insights into our workforce, performance,
+      and overall organizational growth.
+    </p>
+
   </div>
 
-  <div class="stat-card">
-    <h3>20+</h3>
-    <p>Departments</p>
+  <div class="stats-grid">
+
+    <div class="stat-box">
+
+      <div class="stat-icon">👨‍💼</div>
+
+      <h3 class="count">500</h3>
+
+      <p>Active Employees</p>
+
+      <span>Across all departments</span>
+
+    </div>
+
+    <div class="stat-box">
+
+      <div class="stat-icon">🏢</div>
+
+      <h3 class="count">20</h3>
+
+      <p>Departments</p>
+
+      <span>Fully structured teams</span>
+
+    </div>
+
+    <div class="stat-box">
+
+      <div class="stat-icon">📈</div>
+
+      <h3 class="count">95</h3>
+
+      <p>Performance Rate</p>
+
+      <span>Based on yearly review</span>
+
+    </div>
+
+    <div class="stat-box">
+
+      <div class="stat-icon">🌍</div>
+
+      <h3 class="count">12</h3>
+
+      <p>Locations</p>
+
+      <span>Global & remote offices</span>
+
+    </div>
+
   </div>
 
-  <div class="stat-card">
-    <h3>95%</h3>
-    <p>Employee Satisfaction</p>
-  </div>
 </section>
 
 <!-- Section 5 : Departments -->
@@ -191,25 +234,342 @@
 
 <!-- Section 6 : Services -->
 <section class="services">
-  <h2>Our Services</h2>
 
-  <div class="service-card">
-    <h3>Employee Management</h3>
-    <p>Maintain employee records securely.</p>
+  <div class="services-header">
+
+    <h2>Our Premium Services</h2>
+
+    <p>
+      We provide powerful employee management solutions
+      designed to improve productivity, automate workflows,
+      and simplify modern business operations.
+    </p>
+
   </div>
 
-  <div class="service-card">
-    <h3>Leave Management</h3>
-    <p>Apply and approve employee leaves online.</p>
+  <div class="services-container">
+
+    <!-- CARD 1 -->
+
+    <div class="service-card">
+
+      <div class="service-icon">👨‍💼</div>
+
+      <h3>Employee Management</h3>
+
+      <p>
+        Manage employee profiles, records, onboarding,
+        and workplace activities from a centralized dashboard.
+      </p>
+
+      <ul>
+        <li>✔ Employee Database</li>
+        <li>✔ Smart Dashboard</li>
+        <li>✔ Role Management</li>
+      </ul>
+
+      <button>Explore More</button>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="service-card active-service">
+
+      <div class="service-icon">📅</div>
+
+      <h3>Attendance & Leave</h3>
+
+      <p>
+        Monitor employee attendance, approve leave requests,
+        and generate monthly attendance reports instantly.
+      </p>
+
+      <ul>
+        <li>✔ Real-time Tracking</li>
+        <li>✔ Leave Approval</li>
+        <li>✔ Auto Reports</li>
+      </ul>
+
+      <button>Explore More</button>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="service-card">
+
+      <div class="service-icon">💰</div>
+
+      <h3>Payroll System</h3>
+
+      <p>
+        Automate salary calculations, bonus management,
+        payslip generation, and employee payroll processing.
+      </p>
+
+      <ul>
+        <li>✔ Salary Automation</li>
+        <li>✔ Payslip Download</li>
+        <li>✔ Secure Payments</li>
+      </ul>
+
+      <button>Explore More</button>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="service-card">
+
+      <div class="service-icon">📊</div>
+
+      <h3>Performance Analytics</h3>
+
+      <p>
+        Analyze employee productivity, generate performance
+        insights, and monitor department growth efficiently.
+      </p>
+
+      <ul>
+        <li>✔ AI Analytics</li>
+        <li>✔ Productivity Reports</li>
+        <li>✔ Team Insights</li>
+      </ul>
+
+      <button>Explore More</button>
+
+    </div>
+
   </div>
 
-  <div class="service-card">
-    <h3>Internal Communication</h3>
-    <p>Improve communication between teams.</p>
-  </div>
 </section>
 
-<!-- Section 7 : Testimonials -->
+<!-- Section 7 : Why Us -->
+<section class="choose-us">
+
+  <div class="choose-header">
+
+    <h2>Why Companies Trust Our Employee Portal</h2>
+
+    <p>
+      We provide a next-generation employee management platform
+      designed for speed, productivity, security, and seamless
+      communication across modern organizations.
+    </p>
+
+  </div>
+
+  <div class="choose-container">
+
+    <div class="choose-card">
+
+      <div class="choose-icon">⚡</div>
+
+      <h3>Lightning Fast Workflow</h3>
+
+      <p>
+        Automate repetitive HR operations, reduce paperwork,
+        and improve overall productivity with our optimized system.
+      </p>
+
+      <span>Performance Optimized</span>
+
+    </div>
+
+    <div class="choose-card">
+
+      <div class="choose-icon">🔒</div>
+
+      <h3>Advanced Security</h3>
+
+      <p>
+        Secure employee information using encrypted storage,
+        role-based authentication, and protected cloud backups.
+      </p>
+
+      <span>Enterprise Security</span>
+
+    </div>
+
+    <div class="choose-card">
+
+      <div class="choose-icon">☁️</div>
+
+      <h3>Cloud Access</h3>
+
+      <p>
+        Access employee records, payroll, and communication tools
+        from anywhere using secure cloud infrastructure.
+      </p>
+
+      <span>24/7 Accessibility</span>
+
+    </div>
+
+    <div class="choose-card">
+
+      <div class="choose-icon">📊</div>
+
+      <h3>Smart Analytics</h3>
+
+      <p>
+        Generate detailed reports, monitor employee growth,
+        and analyze business performance using real-time insights.
+      </p>
+
+      <span>AI Driven Reports</span>
+
+    </div>
+
+    <div class="choose-card">
+
+      <div class="choose-icon">🤝</div>
+
+      <h3>Team Collaboration</h3>
+
+      <p>
+        Improve communication between departments with integrated
+        messaging, announcements, and shared workspace tools.
+      </p>
+
+      <span>Better Connectivity</span>
+
+    </div>
+
+    <div class="choose-card">
+
+      <div class="choose-icon">🚀</div>
+
+      <h3>Scalable Platform</h3>
+
+      <p>
+        Built for startups, enterprises, and growing businesses
+        with flexible modules and scalable architecture.
+      </p>
+
+      <span>Future Ready</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Section 8 : Our Team -->
+ <section class="team">
+
+  <div class="team-header">
+
+    <h2>Meet Our Creative Team</h2>
+
+    <p>
+      Our passionate professionals work together to build
+      innovative employee management solutions with modern technology.
+    </p>
+
+  </div>
+
+  <div class="team-container">
+
+    <div class="team-card">
+
+      <div class="team-image">
+
+        <img src="./assets/team1.webp" alt="">
+
+        <div class="team-overlay">
+          <span>Frontend Expert</span>
+        </div>
+
+      </div>
+
+      <h3>David Wilson</h3>
+
+      <p class="role">Senior Frontend Developer</p>
+
+      <p class="team-desc">
+        Specializes in building modern responsive interfaces,
+        animations, and interactive web applications.
+      </p>
+
+      <div class="team-socials">
+
+        <span>🌐</span>
+        <span>💼</span>
+        <span>📧</span>
+
+      </div>
+
+    </div>
+
+    <div class="team-card">
+
+      <div class="team-image">
+
+        <img src="./assets/team2.webp" alt="">
+
+        <div class="team-overlay">
+          <span>Creative Designer</span>
+        </div>
+
+      </div>
+
+      <h3>Emma Watson</h3>
+
+      <p class="role">UI / UX Designer</p>
+
+      <p class="team-desc">
+        Designs premium user experiences and clean interfaces
+        focused on usability and visual aesthetics.
+      </p>
+
+      <div class="team-socials">
+
+        <span>🎨</span>
+        <span>📱</span>
+        <span>✨</span>
+
+      </div>
+
+    </div>
+
+    <div class="team-card">
+
+      <div class="team-image">
+
+        <img src="./assets/team3.webp" alt="">
+
+        <div class="team-overlay">
+          <span>Backend Architect</span>
+        </div>
+
+      </div>
+
+      <h3>Michael Roy</h3>
+
+      <p class="role">Backend Developer</p>
+
+      <p class="team-desc">
+        Handles databases, APIs, authentication systems,
+        and scalable server-side architecture.
+      </p>
+
+      <div class="team-socials">
+
+        <span>⚙️</span>
+        <span>🖥️</span>
+        <span>🔐</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Section 9 : Testimonials -->
 <section class="testimonials" id="testimonials">
 
   <h2>Employee Feedback</h2>
@@ -256,7 +616,7 @@
   </div>
 
 </section>
-<!-- Section 8 : Latest News -->
+<!-- Section 10 : Latest News -->
 <section class="news">
   <h2>Latest Company News</h2>
 
@@ -276,68 +636,203 @@
 </section>
 
 <!-- Section 9 : Contact -->
-<section class="contact-section">
+<section class="contact-page">
 
-  <div class="contact-container">
+  <div class="contact-card">
 
     <!-- LEFT INFO -->
-    <div class="contact-info">
+    <div class="contact-left">
+
       <h2>Get in Touch</h2>
-      <p>We are here to help you. Send us a message and we will respond quickly.</p>
 
-      <div class="info-box">
-        <p>📍 Namakkal, India</p>
-      </div>
+      <p class="subtitle">
+        We usually respond within 24 hours.  
+        Let’s build something great together.
+      </p>
 
-      <div class="info-box">
-        <p>📧 support@employee.com</p>
-      </div>
+      <div class="info">
 
-      <div class="info-box">
+        <p>📍 Namakkal, Tamil Nadu</p>
+        <p>📧 support@employeeportal.com</p>
         <p>📞 +91 9945678837</p>
+
       </div>
 
     </div>
 
     <!-- RIGHT FORM -->
-    <form class="contact-form">
+    <div class="contact-right">
 
-      <h2>Contact Us</h2>
+      <form>
 
-      <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
 
-      <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="5"></textarea>
 
-      <input type="text" placeholder="Subject">
+        <button type="submit">Send Message</button>
 
-      <textarea placeholder="Your Message" rows="5" required></textarea>
+      </form>
 
-      <button type="submit">Send Message</button>
-
-    </form>
+    </div>
 
   </div>
 
 </section>
 
-<!-- Section 10 : Footer -->
-<footer>
-  <h2>Employee Portal</h2>
+<!-- Section 11 : Footer -->
+<footer class="footer">
 
-  <p>
-    © 2026 Employee Portal. All Rights Reserved.
-  </p>
+  <div class="footer-container">
+
+    <!-- COMPANY INFO -->
+
+    <div class="footer-column footer-brand">
+
+      <img
+        src="./assets/logo-stackly (1).png"
+        alt="Company Logo"
+        class="footer-logo"
+      >
+
+      <p>
+        Employee Portal is an advanced workforce management
+        platform helping companies simplify HR operations,
+        attendance, payroll, analytics, and communication.
+      </p>
+
+      <div class="footer-socials">
+
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
+        <a href="#">💼</a>
+
+      </div>
+
+    </div>
+
+    <!-- QUICK LINKS -->
+
+    <div class="footer-column">
+
+      <h3>Quick Links</h3>
+
+      <ul>
+
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">About Us</a></li>
+
+        <li><a href="#">Services</a></li>
+
+        <li><a href="#">Employees</a></li>
+
+        <li><a href="#">Dashboard</a></li>
+
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+    <!-- SERVICES -->
+
+    <div class="footer-column">
+
+      <h3>Our Services</h3>
+
+      <ul>
+
+        <li><a href="#">Payroll Management</a></li>
+
+        <li><a href="#">Attendance System</a></li>
+
+        <li><a href="#">Performance Analytics</a></li>
+
+        <li><a href="#">Employee Tracking</a></li>
+
+        <li><a href="#">Cloud Database</a></li>
+
+        <li><a href="#">HR Automation</a></li>
+
+      </ul>
+
+    </div>
+
+    <!-- CONTACT + NEWSLETTER -->
+
+    <div class="footer-column">
+
+      <h3>Contact Us</h3>
+
+      <div class="footer-contact">
+
+        <p>📍 Namakkal, Tamil Nadu, India</p>
+
+        <p>📧 support@employeeportal.com</p>
+
+        <p>📞 +91 9945678837</p>
+
+      </div>
+
+      <div class="newsletter">
+
+        <input
+          type="email"
+          placeholder="Enter your email"
+        >
+
+        <button>Subscribe</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Employee Portal. All Rights Reserved.
+    </p>
+
+    <div class="footer-bottom-links">
+
+      <a href="#">Privacy Policy</a>
+
+      <a href="#">Terms & Conditions</a>
+
+      <a href="#">Security</a>
+
+    </div>
+
+  </div>
+
 </footer>
 
 <!-- error page -->
 
 <section id="errorPage" class="error-page">
 
-  <h1>404</h1>
-  <h2>Page Not Found</h2>
-  <p>Sorry, the page you are looking for does not exist.</p>
+  <div class="error-card">
 
-  <button onclick="goHome()">Go Home</button>
+    <div class="glow"></div>
+
+    <h1>404</h1>
+
+    <h2>Page Not Found</h2>
+
+    <p>
+      The page you’re looking for doesn’t exist or has been moved.
+    </p>
+
+    <button onclick="goHome()">Back to Home</button>
+
+  </div>
 
 </section>
 
