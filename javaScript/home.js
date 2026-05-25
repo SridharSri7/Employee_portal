@@ -1,6 +1,44 @@
 // ================= SAFE INIT =================
 document.addEventListener("DOMContentLoaded", () => {
 
+  const errorPage = document.getElementById("errorPage");
+
+  // ================= SHOW 404 =================
+  function show404() {
+
+    document.body.style.overflow = "hidden";
+
+    document.querySelectorAll("body > *").forEach(el => {
+      if (el.id !== "errorPage") {
+        el.style.display = "none";
+      }
+    });
+
+    if (errorPage) {
+      errorPage.style.display = "flex";
+    }
+  }
+
+  // ================= GO HOME =================
+  function goHome() {
+
+    document.body.style.overflow = "auto";
+
+    document.querySelectorAll("body > *").forEach(el => {
+      el.style.display = "";
+    });
+
+    if (errorPage) {
+      errorPage.style.display = "none";
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // 🔥 IMPORTANT: make global so HTML / other handlers can access it
+  window.show404 = show404;
+  window.goHome = goHome;
+
   // ================= NAVBAR TOGGLE =================
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
@@ -9,50 +47,27 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("show");
   });
 
-  // ================= 404 SYSTEM =================
-
-  function show404() {
-
-    document.body.style.overflow = "hidden";
-
-    document.querySelectorAll("body > *").forEach(el => {
-      if (el.id !== "errorPage") {
-        el.classList.add("hidden-page");
-      }
-    });
-
-    const errorPage = document.getElementById("errorPage");
-    if (errorPage) errorPage.style.display = "flex";
-  }
-
-  function goHome() {
-
-    document.body.style.overflow = "auto";
-
-    document.querySelectorAll(".hidden-page").forEach(el => {
-      el.classList.remove("hidden-page");
-    });
-
-    const errorPage = document.getElementById("errorPage");
-    if (errorPage) errorPage.style.display = "none";
-  }
-
-  window.goHome = goHome; // IMPORTANT (so HTML button can access it)
-
-  function trigger404(e) {
-    e.preventDefault();
-    show404();
-  }
-
-  // ================= NAV + BUTTON EVENTS =================
+  // ================= NAV LINKS -> 404 =================
   document.querySelectorAll(".nav-item").forEach(link => {
-    link.addEventListener("click", trigger404);
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      show404();
+    });
   });
 
+  // ================= BUTTONS =================
   document.querySelector(".login-btn")?.addEventListener("click", show404);
   document.querySelector(".hero button")?.addEventListener("click", show404);
 
-  // ================= COUNTER ANIMATION =================
+  // ================= LOGO CLICK -> HOME (FIXED) =================
+  const logo = document.querySelector(".logo");
+
+  logo?.addEventListener("click", (e) => {
+    e.preventDefault();
+    goHome();
+  });
+
+  // ================= COUNTERS =================
   const counters = document.querySelectorAll(".stat-card h3");
 
   counters.forEach(counter => {
@@ -78,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ================= NEWS HOVER =================
   document.querySelectorAll(".news-card").forEach(card => {
-
     card.addEventListener("mouseenter", () => {
       card.classList.add("active");
     });
@@ -86,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("mouseleave", () => {
       card.classList.remove("active");
     });
-
   });
 
   // ================= FOOTER YEAR =================
@@ -105,17 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
-
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       }
-
     });
 
   }, { threshold: 0.2 });
 
   document.querySelectorAll(
-    ".about h2, .about-intro, .about-card, .feature-box, .stat-card, .dept-card, .departments h2, .dept-subtitle"
+    ".about-card, .feature-box, .stat-card, .dept-card"
   ).forEach(el => observer.observe(el));
 
   // ================= DEPARTMENT CAROUSEL =================
@@ -131,9 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let index = 0;
 
-    const getStep = () => {
+    const step = () => {
       const card = document.querySelector(".dept-card");
-      return card.offsetWidth + 25;
+      return card ? card.offsetWidth + 20 : 320;
     };
 
     setInterval(() => {
@@ -141,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       index++;
 
       deptTrack.style.transition = "transform 0.6s ease-in-out";
-      deptTrack.style.transform = `translateX(-${index * getStep()}px)`;
+      deptTrack.style.transform = `translateX(-${index * step()}px)`;
 
       if (index >= cards.length) {
 
@@ -153,54 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       }
 
-    }, 2000);
+    }, 2500);
 
   }
-
-  // ================= TESTIMONIAL SYSTEM =================
-  const miniCards = document.querySelectorAll(".mini-card");
-  const reviewText = document.getElementById("reviewText");
-  const reviewName = document.getElementById("reviewName");
-  const reviewRole = document.getElementById("reviewRole");
-
-  const reviews = [
-    {
-      text: "This portal made HR work extremely smooth.",
-      name: "John Smith",
-      role: "HR Executive"
-    },
-    {
-      text: "Payroll and attendance tracking is now effortless.",
-      name: "Sarah Lee",
-      role: "Finance Team"
-    },
-    {
-      text: "Clean UI and very fast system performance.",
-      name: "Michael Roy",
-      role: "Developer"
-    }
-  ];
-
-  function setActive(i) {
-
-    miniCards.forEach(c => c.classList.remove("active"));
-    miniCards[i].classList.add("active");
-
-    reviewText.textContent = reviews[i].text;
-    reviewName.textContent = reviews[i].name;
-    reviewRole.textContent = reviews[i].role;
-
-  }
-
-  miniCards.forEach((card, i) => {
-    card.addEventListener("click", () => setActive(i));
-  });
-
-  let tIndex = 0;
-
-  setInterval(() => {
-    tIndex = (tIndex + 1) % reviews.length;
-    setActive(tIndex);
-  }, 4000);
 
 });
